@@ -12,7 +12,7 @@ int main(void) {
 	stack<pair<char, int>> ppap;
 	for (char cur : s) {
 		if (cur == 'A') {
-			if (!ppap.empty() && ppap.top().first == 'P' && ppap.top().second == 2) {	//°¡Àå À§°¡ {P, 2}¸é
+			if (!ppap.empty() && ppap.top().first == 'P' && ppap.top().second == 2) {	//ê°€ì¥ ìœ„ê°€ {P, 2}ë©´
 				ppap.push({ cur, 3 });
 			}
 			else {
@@ -39,7 +39,7 @@ int main(void) {
 			}
 		}
 	}
-	//ÃÖÁ¾ÀûÀ¸·Î ppap¿¡´Â {P, 1} ÇÏ³ª¸¸ ÀÖ¾î¾ß ÇÔ
+	//ìµœì¢…ì ìœ¼ë¡œ ppapì—ëŠ” {P, 1} í•˜ë‚˜ë§Œ ìˆì–´ì•¼ í•¨
 	if (ppap.size() == 1 && ppap.top().first == 'P')
 		cout << "PPAP";
 	else
