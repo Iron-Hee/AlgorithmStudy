@@ -21,22 +21,14 @@ int main(void) {
 			}
 		}
 		else {
-			while (true) {
-				if (ppap.empty()) {
-					ppap.push({ cur, 1 });
-					break;
-				}
-				else {
-					if (ppap.top().first == 'P') {
-						ppap.push({ cur, 2 });
-						break;
-					}
-					else {
-						for (int i = 0; i < 3; i++)
-							ppap.pop();
-					}
-				}
+			while (!ppap.empty() && ppap.top().first == 'A') {
+				for (int i = 0; i < 3; i++)
+					ppap.pop();
 			}
+			if (ppap.empty())
+				ppap.push({ 'P', 1 });
+			else
+				ppap.push({ 'P', 2 });
 		}
 	}
 	//최종적으로 ppap에는 {P, 1} 하나만 있어야 함
