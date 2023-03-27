@@ -6,8 +6,8 @@ using namespace std;
 
 vector<tuple<int, int, int>> data;
 int A, C, B, N;
-long long low = 1, high = INT_MAX;
-long long ans = (long long)(INT_MAX)+1;
+long long low = 0, high = (long long)INT_MAX + 1;
+long long ans = high;
 long long mid;
 
 long long calculate() {
@@ -41,18 +41,6 @@ int main(void) {
 		}
 	}
 	long long freq = 0;
-	if (low == 1) {		//?TTTT...TTT  1에 대해 확인
-		mid = 1;
-		if (calculate() % 2 == 1) {
-			ans = low;
-		}
-	}
-	else if (high == INT_MAX) {	//FFFFF...FFF?  INT_MAX 확인
-		mid = high;
-		if (calculate() % 2 == 1) {
-			ans = high;
-		}
-	}
 
 	if (ans == (long long)INT_MAX + 1)
 		cout << "NOTHING";
