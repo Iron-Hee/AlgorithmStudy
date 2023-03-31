@@ -6,7 +6,7 @@ using namespace std;
 
 vector<tuple<int, int, int>> data;
 int A, C, B, N;
-long long low = 0, high = (long long)INT_MAX + 1;
+long long low = 0, high = (long long)INT_MAX;
 long long ans = high;
 long long mid;
 
